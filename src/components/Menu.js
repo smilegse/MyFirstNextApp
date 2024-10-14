@@ -12,6 +12,8 @@ const Menu = () => {
             <Link className={currentRoute === "/about"? "active-link": "pending-link"} href={"/about"}>About</Link><br/>
             <Link className={currentRoute === "/services"? "active-link": "pending-link"} href={"/services"}>Services</Link><br/>
             <Link className={currentRoute === "/product"? "active-link": "pending-link"} href={{pathname: "/product", query: {id:"101", name: "Book", price:"250Tk"}}}>Product</Link><br/>
+            <Link className={currentRoute === "/product"? "active-link": "pending-link"} href={{pathname: "/product/men"}}>Men Product </Link><br/>
+            <Link className={currentRoute === "/product"? "active-link": "pending-link"} href={{pathname: "/product/woman"}}>Woman Product </Link><br/>
         </div>
     );
 };

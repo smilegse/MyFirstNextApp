@@ -7,14 +7,7 @@ import {useRouter} from "next/navigation"
 const Page = () => {
     const params = useSearchParams()
 
-    const router = useRouter();
 
-    const GoTo = ()=>{
-        router.push("/orders")
-    }
-    const GoToProduct = ()=>{
-        router.push("/product?id=202&name=iPhone&price=150000")
-    }
     return (
         <div>
             <Menu/>
@@ -23,8 +16,6 @@ const Page = () => {
             <h1>Product Name: {params.get('name')}</h1>
             <h1>Price: {params.get('price')}</h1>
 
-            <button onClick={GoTo}>Orders</button>
-            <button onClick={GoToProduct}>Product</button>
 
         </div>
     );

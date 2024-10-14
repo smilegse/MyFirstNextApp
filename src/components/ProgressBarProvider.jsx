@@ -9,7 +9,7 @@ const ProgressBarProvider = ({ children }) => {
                 height="4px"
                 // color="#fffd00"
                 options={{ showSpinner: false }}
-                shallowRouting
+                shallowRouting={false}
             />
         </>
     );
