@@ -5,6 +5,10 @@ const getData = async () =>{
     return await res.json();
 }
 
+export const metadata = {
+    title: 'Men product',
+}
+
 const Page = async () => {
 
     let data = await getData();

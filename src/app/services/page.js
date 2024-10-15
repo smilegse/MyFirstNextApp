@@ -1,6 +1,10 @@
 import React from 'react';
 import Menu from "@/components/Menu";
 
+export const metadata = {
+    title: 'Service',
+}
+
 const Page = () => {
     return (
         <div>

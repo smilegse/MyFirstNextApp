@@ -1,13 +1,18 @@
-'use client'
 import React from 'react';
 import styles from "./page.module.css";
 import Menu from "@/components/Menu";
+import AlertButton from "@/client-components/alert-button";
 
 async function getData(){
     let res = await fetch('https://dummyjson.com/products');
     let json = await res.json();
     return json['products'];
 }
+
+export const metadata = {
+    title: 'Home',
+}
+
 
 const Page = async () => {
 
@@ -18,7 +23,7 @@ const Page = async () => {
           <Menu/>
           <h1 className={styles.myHeadLine}>This is Home Page</h1>
             <div>
-                <button onClick={()=> {alert('Hello')}}>Click</button>
+                <AlertButton/>
                 {
                     data.map((item, index)=>{
                         return(
