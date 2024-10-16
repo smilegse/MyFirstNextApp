@@ -4,8 +4,11 @@ import Menu from "@/components/Menu";
 import AlertButton from "@/client-components/alert-button";
 
 async function getData(){
-    let res = await fetch('https://dummyjson.com/products');
-    let json = await res.json();
+    const res = await fetch('https://dummyjson.com/products');
+    const json = await res.json();
+    if (!res.ok){
+        throw new Error("Something went wrong")
+    }
     return json['products'];
 }
 
